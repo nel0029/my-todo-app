@@ -1,0 +1,139 @@
+/** @format */
+
+.input {
+  display: flex;
+  width: 90%;
+  position: relative;
+  align-items: center;
+}
+
+.input-box {
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px black;
+}
+
+.input-box:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.input-submit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  background-color: #aec6cf;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+}
+.input-submit:hover {
+  background-color: #b3d4e0;
+}
+
+.input-submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+  .todo-list {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+.todo-list-active-tasks {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #77dd77;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list-completed-tasks {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #ff6961;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.todo-list-heading {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.todo-single {
+  font-size: 20px;
+  background: #fdfd96;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.todo-single:hover {
+  transform: scale(1.025);
+}
+
+.todo-single-text {
+  padding: 5px;
+  border: none;
+}
+
+.todo-single-text:focus {
+  outline: none;
+}
+.todo-icons {
+  display: flex;
+  flex-direction: row;
+}
+.todo-icon {
+  padding: 5px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid white;
+}
+
+.todo-icon:hover {
+  cursor: pointer;
+  border-color: black;
+}
+
+.todo-icon-edit {
+  color: black;
+}
+
+.todo-icon-delete {
+  color: #ff6961;
+}
+
+.todo-icon-done {
+  color: #77dd77;
+}
