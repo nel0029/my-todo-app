@@ -21,7 +21,7 @@ const App: React.FC = () => {
   };
 
   const onDragEnd = (result: DropResult) => {
-    const { destination, source, draggableId } = result;
+    const { destination, source } = result;
 
     if (!destination) {
       return;
@@ -37,7 +37,7 @@ const App: React.FC = () => {
     let add;
     let active = todos;
     let complete = completedTodos;
-    // Source Logic
+
     if (source.droppableId === "active-tasks") {
       add = active[source.index];
       active.splice(source.index, 1);
@@ -46,7 +46,6 @@ const App: React.FC = () => {
       complete.splice(source.index, 1);
     }
 
-    // Destination Logic
     if (destination.droppableId === "active-tasks") {
       active.splice(destination.index, 0, add);
     } else {
